@@ -1,67 +1,27 @@
 # Pavel Khaliullin - Portfolio Resume
 
-Профессиональное портфолио-резюме Full-Stack / AI Developer
+**Профессиональное портфолио-резюме Full-Stack / AI Developer**
 
-## 🚀 Особенности
+## 🎨 Особенности
 
-- ✅ Двуязычный интерфейс (English / Русский)
-- ✅ Адаптивный дизайн для всех устройств
-- ✅ Современный UI с анимациями
-- ✅ Очень заметная кнопка переключения языка
-- ✅ Секция с проектами и ссылками
-- ✅ Профессиональный дизайн без "AI-вайба"
+- ✨ Двуязычный интерфейс (EN/RU)
+- 🌓 Темная и светлая темы
+- 📱 Полностью адаптивный дизайн
+- 🎯 SVG иконки
+- ⚡ Плавные анимации
+- ⌨️ Горячие клавиши: `Ctrl+K` (тема), `Ctrl+L` (язык)
 
-## 📋 Как использовать
+## 🚀 Открыть
 
-1. Откройте `index.html` в браузере
-2. Добавьте вашу фотографию как `photo.jpg` в корневую папку проекта (опционально)
+Просто откройте `index.html` в браузере.
 
-## 🎨 Структура проекта
-
-```
-├── index.html      # Основная HTML страница
-├── style.css       # Все стили
-├── script.js       # JavaScript для переключения языка
-├── photo.jpg       # Ваша фотография (добавьте сами)
-└── README.md       # Этот файл
-```
-
-## 🌐 Контакты
+## 📧 Контакты
 
 - **Email**: pasha.174xaliyllin@gmail.com
 - **Telegram**: [@deathqwe](https://t.me/deathqwe)
 - **GitHub**: [desperado616](https://github.com/desperado616)
-
-## 🎯 Мои проекты
-
-### Веб-сайты:
-- [Web HAP Studio](https://web-hap.ru)
-- [Lefevralov](https://lefevralov.ru)
-- [English Learning Platform](https://english-levefral.vercel.app/)
-- [MedikaPlus](https://medikaplus-tau.vercel.app/)
-- [Garage Pro](https://garagepro-brown.vercel.app/)
-- [Beauty Services](https://k1ttlyclawchik.vercel.app/)
-- [Tutor Platform](https://websiterepetitor.vercel.app/)
-- [Doma Real Estate](https://doma-sand.vercel.app/)
-
-### Telegram проекты:
-- [Korm Kabana Mini Game](https://korm-kabana-bot.vercel.app/)
-- [@brs_calculator_bot](https://t.me/brs_calculator_bot)
-
-## 💡 Технологии
-
-- HTML5
-- CSS3 (с переменными и современными функциями)
-- Vanilla JavaScript
-- Google Fonts (Inter)
-
-## 📱 Адаптивность
-
-Сайт полностью адаптирован для:
-- Desktop (1200px+)
-- Tablet (768px - 1200px)
-- Mobile (до 768px)
+- **Portfolio**: [portfolio-desperado616.vercel.app](https://portfolio-desperado616.vercel.app/)
 
 ---
 
-Made with 💜 by Pavel Khaliullin
+Made with 💜 by Pavel Khaliullin © 2026
