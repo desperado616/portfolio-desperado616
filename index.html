@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pavel Khaliullin - Junior+ Full-Stack / AI Developer. Portfolio and resume. Specializing in React, Next.js, Python, AI integrations, and Telegram development.">
+    <meta name="keywords" content="Pavel Khaliullin, Full-Stack Developer, AI Developer, Web Development, React, Next.js, Python, Telegram Bots">
+    <meta name="author" content="Pavel Khaliullin">
+    <title>Pavel Khaliullin — Full-Stack / AI Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Toggle Button - Very Prominent -->
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="lang-icon">🌐</span>
+        <span class="lang-text" data-en="RU" data-ru="EN">RU</span>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="name">Pavel Khaliullin</h1>
+                    <h2 class="title" data-en="Junior+ Full-Stack / AI Developer" data-ru="Junior+ Full-Stack / AI Developer">Junior+ Full-Stack / AI Developer</h2>
+                    <div class="info">
+                        <span>20 <span data-en="years old" data-ru="лет">years old</span></span>
+                        <span class="separator">·</span>
+                        <span data-en="Chelyabinsk, Russia" data-ru="Челябинск, Россия">Chelyabinsk, Russia</span>
+                        <span class="separator">·</span>
+                        <span data-en="3rd-year SUSU student" data-ru="3 курс ЮУрГУ">3rd-year SUSU student</span>
+                    </div>
+                    <p class="availability" data-en="Open to remote, part-time, and full-time opportunities" data-ru="Готов к удалённой работе и part-time / full-time форматам">Open to remote, part-time, and full-time opportunities</p>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:pasha.174xaliyllin@gmail.com" class="contact-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            Email
+                        </a>
+                        <a href="https://t.me/deathqwe" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.84 8.673c-.139.622-.499.775-.999.482l-2.761-2.036-1.332 1.282c-.148.148-.271.271-.554.271l.197-2.815 5.105-4.609c.222-.197-.048-.307-.345-.11l-6.312 3.974-2.721-.851c-.592-.185-.604-.592.124-.876l10.636-4.1c.494-.183.925.11.762.874z"/>
+                            </svg>
+                            Telegram
+                        </a>
+                        <a href="https://github.com/desperado616" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="photo.jpg" alt="Pavel Khaliullin">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="summary">
+        <div class="container">
+            <h3 data-en="Professional Summary" data-ru="О себе">Professional Summary</h3>
+            <p data-en="Young full-stack developer with hands-on experience turning ideas into working web products — from product concept and UI implementation to backend logic, API integrations, deployment, and further development." data-ru="Молодой full-stack разработчик, который умеет самостоятельно превращать идею в работающий web-продукт — от концепции и интерфейса до backend, API, интеграций, deployment и дальнейшего развития.">
+                Young full-stack developer with hands-on experience turning ideas into working web products — from product concept and UI implementation to backend logic, API integrations, deployment, and further development.
+            </p>
+            <p data-en="My primary stack includes JavaScript / TypeScript, React, Next.js, Python, Flask, and Django. However, I am not tied to a specific programming language or framework. I am comfortable entering unfamiliar technical environments and quickly learning the required language or technology through documentation, source code, experimentation, and modern AI tools." data-ru="Основной стек: JavaScript / TypeScript, React, Next.js, Python, Flask, Django. При этом не привязан к конкретному языку или фреймворку: спокойно берусь за незнакомый стек и быстро осваиваю необходимую технологию через документацию, исходный код и современные AI-инструменты. Для меня важнее задача и результат, чем конкретный язык программирования.">
+                My primary stack includes JavaScript / TypeScript, React, Next.js, Python, Flask, and Django. However, I am not tied to a specific programming language or framework. I am comfortable entering unfamiliar technical environments and quickly learning the required language or technology through documentation, source code, experimentation, and modern AI tools.
+            </p>
+            <p data-en="I actively use Claude, GPT, Cursor, and AI coding tools as part of my everyday engineering workflow for architecture exploration, unfamiliar codebase analysis, prototyping, code generation, refactoring, debugging, and development acceleration." data-ru="Активно использую Claude, GPT, Cursor и AI coding tools как часть ежедневной разработки: для анализа архитектуры, изучения незнакомого codebase, прототипирования, генерации и рефакторинга кода, отладки и ускорения разработки.">
+                I actively use Claude, GPT, Cursor, and AI coding tools as part of my everyday engineering workflow for architecture exploration, unfamiliar codebase analysis, prototyping, code generation, refactoring, debugging, and development acceleration.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h3 data-en="Core Technical Skills" data-ru="Ключевые компетенции">Core Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Full-Stack Development</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript / TypeScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">HTML5 / CSS3</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">JSON</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Telegram Development</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Telegram Bot API</span>
+                        <span class="skill-tag" data-en="Telegram bots" data-ru="Telegram-боты">Telegram bots</span>
+                        <span class="skill-tag">Telegram Mini Apps</span>
+                        <span class="skill-tag" data-en="Backend integrations" data-ru="Интеграции">Backend integrations</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>AI Development</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OpenAI / GPT</span>
+                        <span class="skill-tag">Anthropic / Claude</span>
+                        <span class="skill-tag">LLM APIs</span>
+                        <span class="skill-tag">Cursor</span>
+                        <span class="skill-tag" data-en="AI coding agents" data-ru="AI coding agents">AI coding agents</span>
+                        <span class="skill-tag" data-en="AI-assisted development" data-ru="AI-assisted development">AI-assisted development</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Data & APIs</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-en="API integrations" data-ru="API-интеграции">API integrations</span>
+                        <span class="skill-tag" data-en="Data processing" data-ru="Обработка данных">Data processing</span>
+                        <span class="skill-tag" data-en="Web scraping" data-ru="Web scraping">Web scraping</span>
+                        <span class="skill-tag">OpenStreetMap</span>
+                        <span class="skill-tag">Overpass API</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Infrastructure & Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">Lighthouse</span>
+                        <span class="skill-tag">WordPress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="container">
+            <h3 data-en="Featured Projects" data-ru="Мои проекты">Featured Projects</h3>
+            
+            <div class="project-category">
+                <h4 data-en="Web Development" data-ru="Web-разработка">Web Development</h4>
+                <div class="projects-grid">
+                    <a href="https://web-hap.ru" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="project-icon">🌐</div>
+                        <h5>Web HAP Studio</h5>
+                        <p data-en="Commercial web studio website" data-ru="Сайт коммерческой web-студии">Commercial web studio website</p>
+                        <span class="project-link-text">web-hap.ru →</span>
+                    </a>
+                    
+                    <a href="https://lefevralov.ru" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="project-icon">💼</div>
+                        <h5>Lefevralov</h5>
+                        <p data-en="Professional business website" data-ru="Профессиональный бизнес-сайт">Professional business website</p>
+                        <span class="project-link-text">lefevralov.ru →</span>
+                    </a>
+                    
+                    <a href="https://english-levefral.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="project-icon">📚</div>
+                        <h5>English Learning Platform</h5>
+                        <p data-en="Educational web application" data-ru="Образовательное веб-приложение">Educational web application</p>
+                        <span class="project-link-text" data-en="View project →" data-ru="Смотреть →">View project →</span>
+                    </a>
+                    
+                    <a href="https://medikaplus-tau.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="project-icon">⚕️</div>
+                        <h5>MedikaPlus</h5>
+                        <p data-en="Medical services website" data-ru="Сайт медицинских услуг">Medical services website</p>
+                        <span class="project-link-text" data-en="View project →" data-ru="Смотреть →">View project →</span>
+                    </a>
+                    
+                    <a href="https://garagepro-brown.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="project-icon">🚗</div>
+                        <h5>Garage Pro</h5>
+                        <p data-en="Automotive services landing" data-ru="Лендинг автосервиса">Automotive services landing</p>
+                        <span class="project-link-text" data-en="View project →" data-ru="Смотреть →">View project →</span>
+                    </a>
+                    
+                    <a href="https://k1ttlyclawchik.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="project-icon">💅</div>
+                        <h5>Beauty Services</h5>
+                        <p data-en="Beauty salon website" data-ru="Сайт салона красоты">Beauty salon website</p>
+                        <span class="project-link-text" data-en="View project →" data-ru="Смотреть →">View project →</span>
+                    </a>
+                    
+                    <a href="https://websiterepetitor.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="project-icon">👨‍🏫</div>
+                        <h5>Tutor Platform</h5>
+                        <p data-en="Educational tutoring website" data-ru="Сайт репетитора">Educational tutoring website</p>
+                        <span class="project-link-text" data-en="View project →" data-ru="Смотреть →">View project →</span>
+                    </a>
+                    
+                    <a href="https://doma-sand.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
+                        <div class="project-icon">🏠</div>
+                        <h5>Doma</h5>
+                        <p data-en="Real estate website" data-ru="Сайт недвижимости">Real estate website</p>
+                        <span class="project-link-text" data-en="View project →" data-ru="Смотреть →">View project →</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-category">
+                <h4 data-en="Telegram Projects" data-ru="Telegram проекты">Telegram Projects</h4>
+                <div class="projects-grid">
+                    <a href="https://korm-kabana-bot.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card featured">
+                        <div class="project-icon">🎮</div>
+                        <h5>Korm Kabana</h5>
+                        <p data-en="Telegram Mini App game" data-ru="Мини-игра для Telegram">Telegram Mini App game</p>
+                        <span class="project-link-text" data-en="Play game →" data-ru="Играть →">Play game →</span>
+                    </a>
+                    
+                    <a href="https://t.me/brs_calculator_bot" target="_blank" rel="noopener noreferrer" class="project-card featured">
+                        <div class="project-icon">🤖</div>
+                        <h5>BRS Calculator Bot</h5>
+                        <p data-en="Telegram bot for calculations" data-ru="Telegram-бот для расчётов">Telegram bot for calculations</p>
+                        <span class="project-link-text" data-en="Open bot →" data-ru="Открыть бота →">Open bot →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <h3 data-en="Experience" data-ru="Опыт работы">Experience</h3>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h4>Web Studio — web-hap.ru</h4>
+                        <p class="role" data-en="Co-Founder / Full-Stack Developer" data-ru="Основатель / Full-Stack Developer">Co-Founder / Full-Stack Developer</p>
+                    </div>
+                </div>
+                <p data-en="Co-founded and independently operated a web studio together with a partner. Worked across the full cycle of commercial web development: client communication, requirements gathering, development, deployment, optimization, and ongoing support." data-ru="Самостоятельно запускал и развивал собственную web-студию совместно с партнёром. Работал над полным циклом создания коммерческих web-проектов: поиск и работа с клиентами, формирование предложения, разработка, deployment, оптимизация, дальнейшее сопровождение.">
+                    Co-founded and independently operated a web studio together with a partner. Worked across the full cycle of commercial web development: client communication, requirements gathering, development, deployment, optimization, and ongoing support.
+                </p>
+                <p data-en="Built a significant number of landing pages and commercial websites for different industries, including healthcare, automotive, beauty services, education, local businesses, and commercial projects." data-ru="Разрабатывал большое количество лендингов и коммерческих сайтов для различных ниш, включая медицинские услуги, автомобильную тематику, услуги красоты, образовательные услуги, локальный бизнес, коммерческие проекты.">
+                    Built a significant number of landing pages and commercial websites for different industries, including healthcare, automotive, beauty services, education, local businesses, and commercial projects.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h4 data-en="Telegram & Automation Projects" data-ru="Telegram / Automation Projects">Telegram & Automation Projects</h4>
+                        <p class="role" data-en="Independent Developer" data-ru="Независимый разработчик">Independent Developer</p>
+                    </div>
+                </div>
+                <p data-en="Hands-on experience designing and building Telegram-based products and automations. Worked with Telegram bots, Telegram Mini Apps, workflow automation, external APIs, and data sources." data-ru="Самостоятельно создавал и проектировал Telegram-продукты и автоматизации. Опыт включает Telegram-ботов, Telegram Mini Apps, автоматизацию рутинных процессов, интеграцию API, работу с внешними источниками данных.">
+                    Hands-on experience designing and building Telegram-based products and automations. Worked with Telegram bots, Telegram Mini Apps, workflow automation, external APIs, and data sources.
+                </p>
+                <p data-en="Particularly interested in building useful products directly inside Telegram, including automation, productivity, data, and business-oriented services." data-ru="Одно из направлений интересов — создание полезных сервисов непосредственно внутри Telegram, включая продукты для автоматизации, учёта и работы с данными.">
+                    Particularly interested in building useful products directly inside Telegram, including automation, productivity, data, and business-oriented services.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h4>Web3 / Crypto / TON</h4>
+                        <p class="role" data-en="Ecosystem Explorer" data-ru="Исследователь экосистемы">Ecosystem Explorer</p>
+                    </div>
+                </div>
+                <p data-en="Previous hands-on exposure to the crypto and Web3 ecosystem, which gave practical familiarity with rapidly changing technology markets and digital products. Explored the TON ecosystem and the intersection of Telegram and Web3 products." data-ru="Имею ранний практический опыт и интерес к криптовалютной и Web3-среде, благодаря чему хорошо понимаю специфику быстро развивающихся технологических экосистем, продуктов и комьюнити вокруг них. Отдельно интересовался экосистемой TON и Telegram/Web3-направлением.">
+                    Previous hands-on exposure to the crypto and Web3 ecosystem, which gave practical familiarity with rapidly changing technology markets and digital products. Explored the TON ecosystem and the intersection of Telegram and Web3 products.
+                </p>
+                <p data-en="Current interests: Telegram + Mini Apps + AI + blockchain + digital products" data-ru="Это направление интересно мне на стыке: Telegram + Mini Apps + AI + blockchain + digital products">
+                    Current interests: Telegram + Mini Apps + AI + blockchain + digital products
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <h3 data-en="Education" data-ru="Образование">Education</h3>
+            <div class="education-item">
+                <h4 data-en="South Ural State University (SUSU)" data-ru="Южно-Уральский государственный университет (ЮУрГУ)">South Ural State University (SUSU)</h4>
+                <p data-en="Field of Study: Information Systems and Technologies in Business" data-ru="Направление: Информационные системы и технологии в бизнесе">Field of Study: Information Systems and Technologies in Business</p>
+                <p data-en="3rd-year undergraduate student" data-ru="3 курс">3rd-year undergraduate student</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section class="strengths">
+        <div class="container">
+            <h3 data-en="Strengths" data-ru="Сильные стороны">Strengths</h3>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                    </svg>
+                    <p data-en="Fast learner" data-ru="Быстро обучаюсь">Fast learner</p>
+                </div>
+                <div class="strength-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <p data-en="Comfortable with unfamiliar technologies" data-ru="Не боюсь нового">Comfortable with unfamiliar technologies</p>
+                </div>
+                <div class="strength-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg>
+                    <p data-en="Strong problem-solving skills" data-ru="Самостоятельно ищу решения">Strong problem-solving skills</p>
+                </div>
+                <div class="strength-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                    </svg>
+                    <p data-en="End-to-end product development" data-ru="Полный цикл разработки">End-to-end product development</p>
+                </div>
+                <div class="strength-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <p data-en="Strong teamwork & communication" data-ru="Коммуникабелен и командный">Strong teamwork & communication</p>
+                </div>
+                <div class="strength-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <p data-en="Responsible for deadlines" data-ru="Ответственный">Responsible for deadlines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Roles Section -->
+    <section class="target-roles">
+        <div class="container">
+            <h3 data-en="Target Roles" data-ru="Целевая позиция">Target Roles</h3>
+            <p class="target-title">Junior+ Full-Stack Developer / AI Developer / Full-Stack AI Engineer</p>
+            <p data-en="Preferred areas:" data-ru="Особенно интересны:">Preferred areas:</p>
+            <div class="skill-tags">
+                <span class="skill-tag" data-en="AI-powered web applications" data-ru="AI-powered приложения">AI-powered web applications</span>
+                <span class="skill-tag">Full-stack development</span>
+                <span class="skill-tag">React / Next.js</span>
+                <span class="skill-tag">Python backend</span>
+                <span class="skill-tag" data-en="AI agents & LLM integrations" data-ru="AI agents и LLM интеграции">AI agents & LLM integrations</span>
+                <span class="skill-tag" data-en="Automation" data-ru="Автоматизация">Automation</span>
+                <span class="skill-tag">Telegram Bots / Mini Apps</span>
+                <span class="skill-tag">SaaS</span>
+                <span class="skill-tag" data-en="Internal tools" data-ru="Внутренние инструменты">Internal tools</span>
+                <span class="skill-tag">Web3 / TON</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pavel Khaliullin. <span data-en="All rights reserved." data-ru="Все права защищены.">All rights reserved.</span></p>
+            <div class="footer-links">
+                <a href="mailto:pasha.174xaliyllin@gmail.com">Email</a>
+                <span>·</span>
+                <a href="https://t.me/deathqwe" target="_blank" rel="noopener noreferrer">Telegram</a>
+                <span>·</span>
+                <a href="https://github.com/desperado616" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
