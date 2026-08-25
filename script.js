@@ -1,7 +1,6 @@
 /* ========================================
-   PREMIUM PROFESSIONAL PORTFOLIO — JavaScript
-   Sophisticated interactions & micro-animations
-   Built with attention to detail
+   PORTFOLIO JAVASCRIPT
+   Clean interactions & animations
    ======================================== */
 
 'use strict';
@@ -196,7 +195,7 @@ function scrollToTop() {
 }
 
 // ========================================
-// ANIMATED METRICS COUNTER - UNIQUE FEATURE
+// ANIMATED METRICS COUNTER - Optimized with requestAnimationFrame
 // ========================================
 
 function animateMetrics() {
@@ -225,26 +224,36 @@ function animateMetrics() {
                 const metric = entry.target;
                 const target = parseInt(metric.getAttribute('data-count'));
                 const duration = 2000; // 2 seconds
-                const step = target / (duration / 16); // 60fps
-                let current = 0;
-                
+                const startTime = performance.now();
                 const percent = metric.querySelector('.metric-percent');
                 
-                const counter = setInterval(() => {
-                    current += step;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(counter);
+                const animateCount = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Easing function for smooth animation
+                    const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(target * easeOutCubic);
+                    
+                    if (percent) {
+                        metric.firstChild.textContent = current;
+                    } else {
+                        metric.textContent = current;
                     }
                     
-                    const displayValue = Math.floor(current);
-                    if (percent) {
-                        metric.firstChild.textContent = displayValue;
+                    if (progress < 1) {
+                        requestAnimationFrame(animateCount);
                     } else {
-                        metric.textContent = displayValue;
+                        // Ensure final value is exact
+                        if (percent) {
+                            metric.firstChild.textContent = target;
+                        } else {
+                            metric.textContent = target;
+                        }
                     }
-                }, 16);
+                };
                 
+                requestAnimationFrame(animateCount);
                 observer.unobserve(metric);
             }
         });
@@ -254,7 +263,7 @@ function animateMetrics() {
 }
 
 // ========================================
-// PREMIUM MICRO-INTERACTIONS
+// MICRO-INTERACTIONS
 // ========================================
 
 const codeExamples = {
@@ -385,79 +394,13 @@ function setupCodeDemo() {
     });
 }
 
-function setupPremiumInteractions() {
-    // Optimize hover effects with will-change
-    const contactLinks = document.querySelectorAll('.contact-link');
-    contactLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            this.style.willChange = 'transform';
-        });
-        
-        link.addEventListener('mouseleave', function() {
-            setTimeout(() => {
-                this.style.willChange = 'auto';
-            }, 300);
-        });
-    });
-    
-    // Project cards subtle 3D parallax on hover (desktop only)
-    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-        const projectCards = document.querySelectorAll('.project-card');
-        
-        projectCards.forEach(card => {
-            let rafId = null;
-            
-            card.addEventListener('mouseenter', function() {
-                this.style.willChange = 'transform';
-            });
-            
-            card.addEventListener('mousemove', function(e) {
-                if (rafId) cancelAnimationFrame(rafId);
-                
-                rafId = requestAnimationFrame(() => {
-                    const rect = this.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
-                    
-                    const deltaX = (x - centerX) / centerX;
-                    const deltaY = (y - centerY) / centerY;
-                    
-                    // Subtle 3D tilt effect
-                    this.style.transform = `translateY(-8px) perspective(1000px) rotateX(${deltaY * 3}deg) rotateY(${deltaX * 3}deg) scale(1.01)`;
-                });
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                if (rafId) cancelAnimationFrame(rafId);
-                this.style.transform = '';
-                setTimeout(() => {
-                    this.style.willChange = 'auto';
-                }, 300);
-            });
-        });
-    }
-    
-    // Skill tags micro-interactions
-    const skillTags = document.querySelectorAll('.skill-tag');
-    skillTags.forEach(tag => {
-        tag.addEventListener('click', function() {
-            // Ripple effect on click
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = '';
-            }, 150);
-        });
-    });
-    
+function setupMicroInteractions() {
     // Smooth button press feedback
     const allButtons = document.querySelectorAll('button, .contact-link, .project-card');
     allButtons.forEach(button => {
         button.addEventListener('mousedown', function() {
             this.style.transition = 'transform 100ms cubic-bezier(0.23, 1, 0.32, 1)';
-            this.style.transform = 'scale(0.97)';
+            this.style.transform = 'scale(0.98)';
         });
         
         button.addEventListener('mouseup', function() {
@@ -496,7 +439,7 @@ function setupSmoothScroll() {
 }
 
 // ========================================
-// SCROLL ANIMATIONS (Intersection Observer) - Premium stagger
+// SCROLL ANIMATIONS (Intersection Observer) - Optimized with single observer
 // ========================================
 
 function setupScrollAnimations() {
@@ -515,12 +458,13 @@ function setupScrollAnimations() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const observerOptions = {
-        threshold: 0.12,
+        threshold: 0.1,
         rootMargin: '0px 0px -60px 0px'
     };
 
+    // Single observer for all elements
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
                 requestAnimationFrame(() => {
                     entry.target.style.opacity = '1';
@@ -531,39 +475,26 @@ function setupScrollAnimations() {
         });
     }, observerOptions);
 
-    // Observe sections with stagger (except hero)
+    // Observe sections
     const sections = document.querySelectorAll('section:not(.hero)');
     sections.forEach((section, index) => {
         section.style.opacity = '0';
         section.style.transform = prefersReducedMotion ? 'none' : 'translateY(30px)';
         section.style.transition = prefersReducedMotion 
             ? 'opacity 200ms ease' 
-            : `opacity 500ms cubic-bezier(0.23, 1, 0.32, 1) ${index * 60}ms, transform 500ms cubic-bezier(0.23, 1, 0.32, 1) ${index * 60}ms`;
+            : `opacity 400ms cubic-bezier(0.23, 1, 0.32, 1) ${index * 50}ms, transform 400ms cubic-bezier(0.23, 1, 0.32, 1) ${index * 50}ms`;
         observer.observe(section);
     });
     
-    // Observe cards with micro-stagger
+    // Observe cards
     const cards = document.querySelectorAll('.project-card, .skill-category, .strength-item, .experience-item');
     cards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = prefersReducedMotion ? 'none' : 'translateY(20px)';
         card.style.transition = prefersReducedMotion
             ? 'opacity 200ms ease'
-            : `opacity 400ms cubic-bezier(0.23, 1, 0.32, 1) ${index * 40}ms, transform 400ms cubic-bezier(0.23, 1, 0.32, 1) ${index * 40}ms`;
-        
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    requestAnimationFrame(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    });
-                    cardObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-        
-        cardObserver.observe(card);
+            : `opacity 350ms cubic-bezier(0.23, 1, 0.32, 1) ${index * 30}ms, transform 350ms cubic-bezier(0.23, 1, 0.32, 1) ${index * 30}ms`;
+        observer.observe(card);
     });
 }
 
@@ -724,8 +655,8 @@ function init() {
     // Setup code demo
     setupCodeDemo();
     
-    // Setup premium micro-interactions
-    setupPremiumInteractions();
+    // Setup micro-interactions
+    setupMicroInteractions();
     
     // Setup smooth scroll for anchor links
     setupSmoothScroll();

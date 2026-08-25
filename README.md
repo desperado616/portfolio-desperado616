@@ -13,7 +13,7 @@
 ### Technical Highlights
 - ⚡ **Performance Optimized** - Fast loading, smooth scrolling
 - 🎯 **Semantic HTML5** - Proper document structure for SEO and accessibility
-- 🎨 **Modern Design System** - Consistent color tokens, spacing scale, typography
+- 🎨 **Modern Design System** - Consistent color tokens, spacing scale, typography with Geist font
 - ⌨️ **Keyboard Navigation** - Full keyboard support with visible focus indicators
 - 🔍 **SEO Optimized** - Open Graph, Twitter Cards, JSON-LD structured data
 
@@ -21,6 +21,7 @@
 - 🖱️ **Smooth Animations** - Subtle, purposeful motion (respects `prefers-reduced-motion`)
 - 📜 **Scroll Progress Bar** - Visual feedback on page position
 - 🔝 **Back to Top** - Quick navigation button
+- 🎨 **Fixed UI Controls** - Theme toggle (top left), Language toggle (top right), always visible
 - ⌨️ **Keyboard Shortcuts**:
   - `Ctrl+K` / `Cmd+K` - Toggle theme
   - `Ctrl+L` / `Cmd+L` - Switch language
@@ -49,6 +50,11 @@ portfolio/
 ```
 
 ## 🎨 Design System
+
+### Typography
+- **Primary Font**: Geist (Google Fonts)
+- Modern, clean, excellent readability
+- Variable font with optimal proportions
 
 ### Color Tokens
 - Proper semantic naming (`--color-text-primary`, `--color-bg-surface`)
@@ -124,3 +130,4 @@ Graceful degradation for older browsers:
 ---
 
 **Built with:** Vanilla HTML, CSS, JavaScript - No frameworks, no build tools, just clean code.
+**Font:** Geist by Vercel - Modern, clean, professional typography.
