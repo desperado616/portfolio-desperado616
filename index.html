@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pavel Khaliullin — Middle+ Full-Stack / AI Developer. React, Next.js, Python, AI integrations, and Telegram products.">
+    <meta name="description" content="Pavel Khaliullin — Middle+ full-stack / AI developer. React, Next.js, Python, Telegram, Web3 / TON. Available for remote work.">
     <meta name="author" content="Pavel Khaliullin">
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#f6f5f1">
     <meta name="color-scheme" content="light dark">
-    <title>Pavel Khaliullin — Full-Stack / AI Developer</title>
+    <title>Pavel Khaliullin — Full-stack / AI developer</title>
 
     <script>
         (function () {
             try {
-                localStorage.removeItem('preferredLanguage');
-                var theme = localStorage.getItem('preferredTheme');
+                var theme = localStorage.getItem('theme');
                 if (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     theme = 'dark';
                 }
@@ -21,7 +20,6 @@
                     document.documentElement.setAttribute('data-theme', 'dark');
                 }
             } catch (e) {}
-            document.documentElement.lang = 'en';
         })();
     </script>
 
@@ -29,25 +27,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="photo.jpg" as="image">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://portfolio-desperado616.vercel.app/">
-    <meta property="og:title" content="Pavel Khaliullin — Full-Stack / AI Developer">
-    <meta property="og:description" content="Middle+ Full-Stack / AI Developer. React, Next.js, Python, AI integrations, and Telegram products.">
+    <meta property="og:title" content="Pavel Khaliullin — Full-stack / AI developer">
+    <meta property="og:description" content="Middle+ full-stack / AI developer. React, Next.js, Python, Telegram, Web3 / TON.">
     <meta property="og:image" content="https://portfolio-desperado616.vercel.app/photo.jpg">
-    <meta property="og:image:alt" content="Portrait of Pavel Khaliullin">
+    <meta property="og:image:alt" content="Pavel Khaliullin">
     <meta property="og:locale" content="en_US">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pavel Khaliullin — Full-Stack / AI Developer">
-    <meta name="twitter:description" content="Middle+ Full-Stack / AI Developer. React, Next.js, Python, AI integrations, and Telegram products.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pavel Khaliullin — Full-stack / AI developer">
+    <meta name="twitter:description" content="Middle+ full-stack / AI developer. React, Next.js, Python, Telegram, Web3 / TON.">
     <meta name="twitter:image" content="https://portfolio-desperado616.vercel.app/photo.jpg">
-    <meta name="twitter:image:alt" content="Portrait of Pavel Khaliullin">
+    <meta name="twitter:image:alt" content="Pavel Khaliullin">
 
     <link rel="canonical" href="https://portfolio-desperado616.vercel.app/">
-    <link rel="alternate" hreflang="en" href="https://portfolio-desperado616.vercel.app/">
-    <link rel="alternate" hreflang="x-default" href="https://portfolio-desperado616.vercel.app/">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.png" type="image/png">
@@ -59,7 +55,7 @@
       "@type": "Person",
       "name": "Pavel Khaliullin",
       "jobTitle": "Middle+ Full-Stack / AI Developer",
-      "description": "Middle+ Full-Stack / AI Developer specializing in React, Next.js, Python, AI integrations, and Telegram development",
+      "description": "Full-stack / AI developer. React, Next.js, Python, Telegram, Web3 / TON.",
       "url": "https://portfolio-desperado616.vercel.app/",
       "image": "https://portfolio-desperado616.vercel.app/photo.jpg",
       "email": "pasha.174xaliyllin@gmail.com",
@@ -67,325 +63,210 @@
         "https://github.com/desperado616",
         "https://t.me/deathqwe"
       ],
-      "knowsAbout": ["JavaScript", "TypeScript", "React", "Next.js", "Python", "Flask", "Django", "AI Development", "Telegram Bots"]
+      "knowsAbout": ["JavaScript", "TypeScript", "React", "Next.js", "Python", "Flask", "Django", "Telegram", "TON", "Web3", "LLM APIs"]
     }
     </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-
-    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
-        <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-    </button>
-
-    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
-        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 15l-6-6-6 6"/>
-        </svg>
-    </button>
+    <div class="shell topbar">
+        <nav class="top-nav" aria-label="Sections">
+            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+        </nav>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark appearance">
+            Dark
+        </button>
+    </div>
 
     <main id="main-content" tabindex="-1">
-        <section class="hero" aria-labelledby="hero-heading">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <p class="eyebrow">Available worldwide · Remote</p>
-                    <h1 id="hero-heading" class="name">Pavel Khaliullin</h1>
-                    <p class="title">Middle+ Full-Stack / AI Developer</p>
-                    <p class="lead">I ship web products and Telegram apps end to end — from the first client conversation to a live deploy and ongoing care.</p>
-                    <p class="availability">Open to remote, part-time, and full-time roles</p>
+        <section class="intro shell" aria-labelledby="hero-heading">
+            <div class="intro-copy">
+                <h1 id="hero-heading">Pavel Khaliullin</h1>
+                <p class="role-line">Middle+ Full-Stack / AI Developer</p>
+                <p class="lede">Web products and Telegram apps, from the first client conversation to a live deploy. React, Next.js, Python. TON and Mini Apps.</p>
+                <p class="availability">Open to remote, part-time, and full-time.</p>
+                <p class="intro-links">
+                    <a href="mailto:pasha.174xaliyllin@gmail.com">Email</a>
+                    <a href="https://t.me/deathqwe" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    <a href="https://github.com/desperado616" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </p>
+            </div>
+            <figure class="portrait">
+                <img src="photo.jpg" alt="Pavel Khaliullin" width="320" height="400" fetchpriority="high" decoding="async">
+            </figure>
+        </section>
 
-                    <div class="hero-cta">
-                        <a href="mailto:pasha.174xaliyllin@gmail.com" class="cta-primary">
-                            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span>Get in touch</span>
-                        </a>
-                        <a class="email-plain" href="mailto:pasha.174xaliyllin@gmail.com">pasha.174xaliyllin@gmail.com</a>
-                    </div>
+        <section class="about shell" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <div class="prose">
+                <p>I turn product ideas into working software. I co-founded Web HAP Studio and run commercial projects from kickoff to production: interface, backend, APIs, deploy, and maintenance.</p>
+                <p>I like owning the whole path — talking to the client, gathering requirements, implementing the UI, writing the server, connecting third-party APIs, shipping on Vercel, checking Lighthouse, and staying on after launch.</p>
+                <p>Day to day: JavaScript and TypeScript with React and Next.js, Python with Flask and Django. REST, JSON, Git, GitHub, mobile-first CSS. If the problem needs a new stack, I read the docs, look at the source, and start building.</p>
+                <p>A second track is Telegram: bots, Mini Apps, and tools that live where people already spend time. I have shipped a Mini App game and a calculator bot.</p>
+                <p>Claude, GPT, and Cursor are part of the workflow — reading unfamiliar code, prototyping, refactoring, debugging. I stay responsible for the architecture and what the user actually clicks.</p>
+            </div>
+        </section>
 
-                    <nav aria-label="Contact links">
-                        <ul class="contact-links">
-                            <li>
-                                <a href="https://t.me/deathqwe" class="contact-link" target="_blank" rel="noopener noreferrer">Telegram</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/desperado616" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            </li>
-                        </ul>
-                    </nav>
+        <section class="skills shell" id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <dl class="skill-list">
+                <div>
+                    <dt>Full-stack</dt>
+                    <dd>JavaScript / TypeScript, React, Next.js, HTML5 / CSS3, Python, Flask, Django, REST APIs, JSON</dd>
                 </div>
-                <div class="hero-image">
-                    <div class="image-wrapper" id="portraitWrapper">
-                        <span class="portrait-fallback" aria-hidden="true">PK</span>
-                        <img src="photo.jpg" alt="Pavel Khaliullin" width="600" height="800" fetchpriority="high" decoding="async">
-                    </div>
+                <div>
+                    <dt>Telegram</dt>
+                    <dd>Telegram Bot API, bots, Mini Apps, backend integrations</dd>
                 </div>
-            </div>
-        </section>
-
-        <section class="summary" aria-labelledby="summary-heading">
-            <div class="container measure">
-                <h2 id="summary-heading">About</h2>
-                <p>I am a full-stack developer who turns product ideas into working software. I co-founded Web HAP Studio and run commercial projects from kickoff to production: interfaces, backend logic, APIs, deployment, and maintenance.</p>
-                <p>I like owning the whole path — talking to a client, gathering requirements, implementing the UI, writing the server, connecting third-party APIs, shipping on Vercel, checking performance in Lighthouse, and staying on after launch. If something is unclear, I ask and ship instead of hiding behind a ticket.</p>
-                <p>Day to day I work in JavaScript and TypeScript with React and Next.js, and in Python with Flask and Django. REST APIs, JSON, Git, GitHub, and mobile-first CSS are the default. I am not married to a stack: if the problem needs something new, I read the docs, look at the source, and start building.</p>
-                <p>A second track is Telegram: bots, Mini Apps, and small tools that live where people already spend time. I have shipped a Mini App game and a calculator bot, and I keep looking at how Telegram, web UI, and AI can sit in one product.</p>
-                <p>Claude, GPT, and Cursor are part of the engineering workflow — reading unfamiliar code, prototyping faster, refactoring, and debugging. The point is not to generate a page and walk away. I stay responsible for the result, the structure, and the details a user will actually click.</p>
-                <p>I am looking for a Middle+ full-stack or AI-adjacent role — remote, part-time, or full-time. The work I want is practical: AI-powered web apps, internal tools, SaaS, automation, Telegram products. If you have a messy problem and need someone who will take it to production, write to me.</p>
-            </div>
-        </section>
-
-        <section class="skills" aria-labelledby="skills-heading">
-            <div class="container">
-                <h2 id="skills-heading">Skills</h2>
-                <div class="skills-grid">
-                    <article class="skill-category">
-                        <h3>Full-stack</h3>
-                        <ul class="skill-tags">
-                            <li>JavaScript / TypeScript</li>
-                            <li>React</li>
-                            <li>Next.js</li>
-                            <li>HTML5 / CSS3</li>
-                            <li>Python</li>
-                            <li>Flask</li>
-                            <li>Django</li>
-                            <li>REST APIs</li>
-                            <li>JSON</li>
-                        </ul>
-                    </article>
-
-                    <article class="skill-category">
-                        <h3>Telegram</h3>
-                        <ul class="skill-tags">
-                            <li>Telegram Bot API</li>
-                            <li>Telegram bots</li>
-                            <li>Telegram Mini Apps</li>
-                            <li>Backend integrations</li>
-                        </ul>
-                    </article>
-
-                    <article class="skill-category">
-                        <h3>AI</h3>
-                        <ul class="skill-tags">
-                            <li>OpenAI / GPT</li>
-                            <li>Anthropic / Claude</li>
-                            <li>LLM APIs</li>
-                            <li>Cursor</li>
-                            <li>AI coding agents</li>
-                            <li>AI-assisted development</li>
-                        </ul>
-                    </article>
-
-                    <article class="skill-category">
-                        <h3>Data &amp; APIs</h3>
-                        <ul class="skill-tags">
-                            <li>API integrations</li>
-                            <li>Data processing</li>
-                            <li>Web scraping</li>
-                            <li>OpenStreetMap</li>
-                            <li>Overpass API</li>
-                        </ul>
-                    </article>
-
-                    <article class="skill-category">
-                        <h3>Infrastructure</h3>
-                        <ul class="skill-tags">
-                            <li>Git</li>
-                            <li>GitHub</li>
-                            <li>Vercel</li>
-                            <li>Lighthouse</li>
-                            <li>WordPress</li>
-                        </ul>
-                    </article>
+                <div>
+                    <dt>AI</dt>
+                    <dd>OpenAI / GPT, Anthropic / Claude, LLM APIs, Cursor, coding agents</dd>
                 </div>
-            </div>
-        </section>
-
-        <section class="projects" aria-labelledby="projects-heading">
-            <div class="container">
-                <h2 id="projects-heading">Selected work</h2>
-
-                <div class="project-category">
-                    <h3>Web</h3>
-                    <ul class="projects-grid">
-                        <li>
-                            <a href="https://web-hap.ru" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>Web HAP Studio</h4>
-                                <p>Commercial studio website</p>
-                                <span class="project-link-text">Visit site</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://lefevralov.ru" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>Lefevralov</h4>
-                                <p>Professional business website</p>
-                                <span class="project-link-text">Visit site</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://english-levefral.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>English Learning Platform</h4>
-                                <p>Educational web application</p>
-                                <span class="project-link-text">Visit site</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://medikaplus-tau.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>MedikaPlus</h4>
-                                <p>Medical services website</p>
-                                <span class="project-link-text">Visit site</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://garagepro-brown.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>Garage Pro</h4>
-                                <p>Automotive services landing page</p>
-                                <span class="project-link-text">Visit site</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://k1ttlyclawchik.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>Beauty Services</h4>
-                                <p>Salon website</p>
-                                <span class="project-link-text">Visit site</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://websiterepetitor.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>Tutor Platform</h4>
-                                <p>Tutoring website</p>
-                                <span class="project-link-text">Visit site</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://doma-sand.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>Doma</h4>
-                                <p>Real estate website</p>
-                                <span class="project-link-text">Visit site</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <dt>Data &amp; APIs</dt>
+                    <dd>API integrations, data processing, web scraping, OpenStreetMap, Overpass API</dd>
                 </div>
-
-                <div class="project-category">
-                    <h3>Telegram</h3>
-                    <ul class="projects-grid">
-                        <li>
-                            <a href="https://korm-kabana-bot.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>Korm Kabana</h4>
-                                <p>Telegram Mini App game</p>
-                                <span class="project-link-text">Open app</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://t.me/brs_calculator_bot" target="_blank" rel="noopener noreferrer" class="project-card">
-                                <h4>Calculator Bot</h4>
-                                <p>Telegram bot for calculations</p>
-                                <span class="project-link-text">Open bot</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <dt>Infrastructure</dt>
+                    <dd>Git, GitHub, Vercel, Lighthouse, WordPress</dd>
                 </div>
-            </div>
+            </dl>
         </section>
 
-        <section class="experience" aria-labelledby="experience-heading">
-            <div class="container measure">
-                <h2 id="experience-heading">Experience</h2>
+        <section class="work shell" id="work" aria-labelledby="work-heading">
+            <h2 id="work-heading">Work</h2>
 
-                <article class="experience-item">
-                    <header class="experience-header">
-                        <h3>Web HAP Studio</h3>
-                        <p class="role">Co-Founder / Full-Stack Developer</p>
-                    </header>
-                    <p>Co-founded a web studio with a partner. Full commercial cycle: client communication, requirements, implementation, Vercel deploys, Lighthouse performance work, and ongoing maintenance. Concept to a live site in production.</p>
-                    <p>Shipped landing pages and commercial websites across industries: healthcare (MedikaPlus), automotive (Garage Pro), beauty, education, real estate (Doma), and business services. The projects are live and used by real customers.</p>
-                    <p>Implementation: React / Next.js with server-side rendering, responsive mobile-first CSS, semantic HTML, Git and GitHub, continuous deployment on Vercel, and performance monitoring.</p>
-                </article>
+            <h3 class="work-group">Web</h3>
+            <ul class="work-list">
+                <li>
+                    <a href="https://web-hap.ru" target="_blank" rel="noopener noreferrer" class="work-row">
+                        <span class="work-name">Web HAP Studio</span>
+                        <span class="work-desc">Commercial studio website.</span>
+                        <span class="work-url">web-hap.ru</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://lefevralov.ru" target="_blank" rel="noopener noreferrer" class="work-row">
+                        <span class="work-name">Lefevralov</span>
+                        <span class="work-desc">Business website.</span>
+                        <span class="work-url">lefevralov.ru</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://medikaplus-tau.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-row">
+                        <span class="work-name">MedikaPlus</span>
+                        <span class="work-desc">Medical services website.</span>
+                        <span class="work-url">medikaplus-tau.vercel.app</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://garagepro-brown.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-row">
+                        <span class="work-name">Garage Pro</span>
+                        <span class="work-desc">Automotive services landing.</span>
+                        <span class="work-url">garagepro-brown.vercel.app</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://k1ttlyclawchik.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-row">
+                        <span class="work-name">K1ttly</span>
+                        <span class="work-desc">Beauty salon website.</span>
+                        <span class="work-url">k1ttlyclawchik.vercel.app</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://websiterepetitor.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-row">
+                        <span class="work-name">Tutor Platform</span>
+                        <span class="work-desc">Tutoring website.</span>
+                        <span class="work-url">websiterepetitor.vercel.app</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://doma-sand.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-row">
+                        <span class="work-name">Doma</span>
+                        <span class="work-desc">Real estate website.</span>
+                        <span class="work-url">doma-sand.vercel.app</span>
+                    </a>
+                </li>
+            </ul>
 
-                <article class="experience-item">
-                    <header class="experience-header">
-                        <h3>Telegram &amp; automation</h3>
-                        <p class="role">Independent Developer</p>
-                    </header>
-                    <p>Built Telegram products from concept to deploy: bots on the Telegram Bot API, Mini Apps with React and the Telegram WebApp SDK, and automation scripts. Commands, inline keyboards, webhooks, and Mini App integration with Telegram features.</p>
-                    <p>Shipped Korm Kabana (Mini App game on Vercel) and a calculation bot with custom commands. Integrations include external APIs, data pipelines, OpenStreetMap / Overpass for location data, and JSON processing.</p>
-                    <p>Focus: practical automation and data-driven tools inside Telegram — productivity bots, data services, business workflows — products that live where users already are.</p>
-                </article>
-
-                <article class="experience-item">
-                    <header class="experience-header">
-                        <h3>Web3 / TON</h3>
-                        <p class="role">Ecosystem Explorer</p>
-                    </header>
-                    <p>Earlier work around crypto and Web3: how fast-moving tech markets behave, how digital products scale, and how technical communities form. Close-up view of rapid development cycles, protocol upgrades, and product iteration.</p>
-                    <p>Explored TON and how it sits next to Telegram. Interest: Telegram as distribution, Mini Apps as the UI, TON as settlement, and AI for automation — products that combine those layers without overclaiming a finished company.</p>
-                </article>
-            </div>
+            <h3 class="work-group">Telegram</h3>
+            <ul class="work-list">
+                <li>
+                    <a href="https://korm-kabana-bot.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-row">
+                        <span class="work-name">Korm Kabana</span>
+                        <span class="work-desc">Mini App game. Catch burgers, dodge bombs.</span>
+                        <span class="work-url">korm-kabana-bot.vercel.app</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/brs_calculator_bot" target="_blank" rel="noopener noreferrer" class="work-row">
+                        <span class="work-name">BRS Calculator Bot</span>
+                        <span class="work-desc">Telegram bot for calculations.</span>
+                        <span class="work-url">t.me/brs_calculator_bot</span>
+                    </a>
+                </li>
+            </ul>
         </section>
 
-        <section class="strengths" aria-labelledby="strengths-heading">
-            <div class="container measure">
-                <h2 id="strengths-heading">How I work</h2>
-                <ul class="strengths-list">
-                    <li>Fast learner on unfamiliar stacks</li>
-                    <li>Comfortable walking into new codebases</li>
-                    <li>Strong problem-solving, independently</li>
-                    <li>End-to-end product development</li>
-                    <li>Clear communication with clients and teammates</li>
-                    <li>Reliable on deadlines</li>
-                </ul>
-            </div>
+        <section class="experience shell" id="experience" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Experience</h2>
+
+            <article class="job">
+                <header>
+                    <h3>Web HAP Studio</h3>
+                    <p class="role">Co-founder / Full-stack</p>
+                </header>
+                <p>Co-founded a web studio with a partner. Full commercial cycle: client communication, requirements, implementation, Vercel deploys, Lighthouse, ongoing maintenance. Concept to a live site.</p>
+                <p>Shipped landing pages and commercial sites across industries: healthcare (MedikaPlus), automotive (Garage Pro), beauty (K1ttly), education (tutoring), real estate (Doma), and business services. Live, used by real customers.</p>
+                <p>React / Next.js with SSR, mobile-first CSS, semantic HTML, GitHub, continuous deploy on Vercel, performance monitoring.</p>
+            </article>
+
+            <article class="job">
+                <header>
+                    <h3>Telegram &amp; automation</h3>
+                    <p class="role">Independent developer</p>
+                </header>
+                <p>Bots on the Telegram Bot API, Mini Apps with React and the Telegram WebApp SDK, automation scripts. Commands, inline keyboards, webhooks, Mini App features.</p>
+                <p>Shipped Korm Kabana (Mini App game on Vercel) and BRS Calculator Bot with custom commands. Integrations: external APIs, data pipelines, OpenStreetMap / Overpass, JSON processing.</p>
+                <p>Focus: automation and data tools inside Telegram — productivity bots, data services, business workflows — products that live where users already are.</p>
+            </article>
+
+            <article class="job">
+                <header>
+                    <h3>Web3 / TON</h3>
+                    <p class="role">Ecosystem explorer</p>
+                </header>
+                <p>Earlier work around crypto and Web3: how fast-moving tech markets behave, how digital products scale, and how technical communities form. Close-up view of rapid development cycles, protocol upgrades, and product iteration.</p>
+                <p>Explored TON and how it sits next to Telegram. Interest: Telegram as distribution, Mini Apps as the UI, TON as settlement, AI for automation — products that combine those layers.</p>
+            </article>
         </section>
 
-        <section class="target-roles" aria-labelledby="target-roles-heading">
-            <div class="container">
-                <h2 id="target-roles-heading">Looking for</h2>
-                <p class="target-title">Middle+ Full-Stack Developer / AI Developer / Full-Stack AI Engineer</p>
-                <p>Preferred areas</p>
-                <ul class="skill-tags">
-                    <li>AI-powered web applications</li>
-                    <li>Full-stack development</li>
-                    <li>React / Next.js</li>
-                    <li>Python backend</li>
-                    <li>AI agents &amp; LLM integrations</li>
-                    <li>Automation</li>
-                    <li>Telegram Bots / Mini Apps</li>
-                    <li>SaaS</li>
-                    <li>Internal tools</li>
-                    <li>Web3 / TON</li>
-                </ul>
-            </div>
+        <section class="how shell" aria-labelledby="how-heading">
+            <h2 id="how-heading">How I work</h2>
+            <ul class="plain-list">
+                <li>Fast learner on unfamiliar stacks</li>
+                <li>Comfortable walking into new codebases</li>
+                <li>Solves problems independently</li>
+                <li>End-to-end product development</li>
+                <li>Clear with clients and teammates</li>
+                <li>Reliable on deadlines</li>
+            </ul>
+        </section>
+
+        <section class="looking shell" aria-labelledby="looking-heading">
+            <h2 id="looking-heading">Looking for</h2>
+            <p class="looking-role">Middle+ Full-Stack Developer / AI Developer / Full-Stack AI Engineer</p>
+            <p class="looking-areas">AI-powered web apps, full-stack, React / Next.js, Python backend, AI agents and LLM integrations, automation, Telegram bots and Mini Apps, SaaS, internal tools, Web3 / TON.</p>
+            <p>Remote, part-time, or full-time.</p>
         </section>
     </main>
 
-    <footer>
-        <div class="container footer-inner">
-            <p>&copy; 2026 Pavel Khaliullin. All rights reserved.</p>
-            <nav aria-label="Footer">
-                <ul class="footer-links">
-                    <li><a href="mailto:pasha.174xaliyllin@gmail.com">Email</a></li>
-                    <li><a href="https://t.me/deathqwe" target="_blank" rel="noopener noreferrer">Telegram</a></li>
-                    <li><a href="https://github.com/desperado616" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                </ul>
-            </nav>
+    <footer class="colophon">
+        <div class="shell colophon-row">
+            <p>© 2026 Pavel Khaliullin</p>
         </div>
     </footer>
 
