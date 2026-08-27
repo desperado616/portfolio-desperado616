@@ -187,9 +187,9 @@ a:hover {
 /* Intro */
 .intro {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 22rem);
     gap: var(--space-7);
-    align-items: end;
+    align-items: center;
     padding-block: var(--space-6) var(--space-9);
 }
 
@@ -240,8 +240,10 @@ a:hover {
 }
 
 .portrait {
-    width: 11.5rem;
+    width: 100%;
+    max-width: 22rem;
     margin: 0;
+    justify-self: end;
 }
 
 .portrait img {
@@ -471,8 +473,10 @@ section h2 {
     }
 
     .portrait {
-        width: 8.5rem;
+        width: min(100%, 16rem);
+        max-width: none;
         order: -1;
+        justify-self: start;
     }
 
     .work-row {
