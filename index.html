@@ -18,6 +18,13 @@
                 }
                 if (theme === 'dark') {
                     document.documentElement.setAttribute('data-theme', 'dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                } else {
+                    document.documentElement.style.colorScheme = 'light';
+                }
+                var lang = localStorage.getItem('lang');
+                if (lang === 'ru' || lang === 'en') {
+                    document.documentElement.lang = lang;
                 }
             } catch (e) {}
         })();
@@ -27,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="photo.jpg" as="image">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://portfolio-desperado616.vercel.app/">
@@ -36,6 +43,7 @@
     <meta property="og:image" content="https://portfolio-desperado616.vercel.app/photo.jpg">
     <meta property="og:image:alt" content="Pavel Khaliullin">
     <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Pavel Khaliullin — Full-stack / AI developer">
@@ -44,9 +52,12 @@
     <meta name="twitter:image:alt" content="Pavel Khaliullin">
 
     <link rel="canonical" href="https://portfolio-desperado616.vercel.app/">
+    <link rel="alternate" hreflang="x-default" href="https://portfolio-desperado616.vercel.app/">
+    <link rel="me" href="https://github.com/desperado616">
+    <link rel="me" href="https://t.me/deathqwe">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <script type="application/ld+json">
@@ -54,6 +65,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Pavel Khaliullin",
+      "alternateName": "Павел Халиуллин",
       "jobTitle": "Middle+ Full-Stack / AI Developer",
       "description": "Full-stack / AI developer. React, Next.js, Python, Telegram, Web3 / TON.",
       "url": "https://portfolio-desperado616.vercel.app/",
@@ -68,47 +80,54 @@
     </script>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link" data-en="Skip to main content" data-ru="К основному содержимому">Skip to main content</a>
 
     <div class="shell topbar">
-        <nav class="top-nav" aria-label="Sections">
-            <a href="#work">Work</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
+        <nav class="top-nav" aria-label="Sections" data-en-aria="Sections" data-ru-aria="Разделы">
+            <a href="#work" data-en="Work" data-ru="Работы">Work</a>
+            <a href="#skills" data-en="Skills" data-ru="Навыки">Skills</a>
+            <a href="#experience" data-en="Experience" data-ru="Опыт">Experience</a>
         </nav>
-        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to dark appearance">
-            Dark
-        </button>
+        <div class="top-controls">
+            <div class="locale" role="group" aria-label="Language" data-en-aria="Language" data-ru-aria="Язык">
+                <button type="button" class="locale-btn" data-lang="en" aria-pressed="true">EN</button>
+                <button type="button" class="locale-btn" data-lang="ru" aria-pressed="false">RU</button>
+            </div>
+            <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Switch to dark appearance">
+                Dark
+            </button>
+        </div>
     </div>
 
     <main id="main-content" tabindex="-1">
         <section class="intro shell" aria-labelledby="hero-heading">
             <div class="intro-copy">
-                <h1 id="hero-heading">Pavel Khaliullin</h1>
-                <p class="role-line">Middle+ Full-Stack / AI Developer</p>
-                <p class="lede">Web products and Telegram apps, from the first client conversation to a live deploy. React, Next.js, Python. TON and Mini Apps.</p>
-                <p class="availability">Open to remote, part-time, and full-time.</p>
+                <h1 id="hero-heading" data-en="Pavel Khaliullin" data-ru="Павел Халиуллин">Pavel Khaliullin</h1>
+                <p class="role-line" data-en="Middle+ Full-Stack / AI Developer" data-ru="Middle+ фуллстек / AI-разработчик">Middle+ Full-Stack / AI Developer</p>
+                <p class="lede" data-en="Web products and Telegram apps, from the first client conversation to a live deploy. React, Next.js, Python. TON and Mini Apps." data-ru="Веб-продукты и Telegram-приложения: от первого разговора с клиентом до боевого деплоя. React, Next.js, Python. TON и Mini Apps.">Web products and Telegram apps, from the first client conversation to a live deploy. React, Next.js, Python. TON and Mini Apps.</p>
+                <p class="availability" data-en="Open to remote, part-time, and full-time." data-ru="Открыт к удалёнке, part-time и full-time.">Open to remote, part-time, and full-time.</p>
                 <p class="intro-links">
                     <a href="mailto:pasha.174xaliyllin@gmail.com">Email</a>
-                    <a href="https://t.me/deathqwe" target="_blank" rel="noopener noreferrer">Telegram</a>
-                    <a href="https://github.com/desperado616" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://t.me/deathqwe" target="_blank" rel="noopener noreferrer">Telegram <span class="visually-hidden" data-en="(opens in a new tab)" data-ru="(откроется в новой вкладке)">(opens in a new tab)</span></a>
+                    <a href="https://github.com/desperado616" target="_blank" rel="noopener noreferrer">GitHub <span class="visually-hidden" data-en="(opens in a new tab)" data-ru="(откроется в новой вкладке)">(opens in a new tab)</span></a>
                 </p>
             </div>
             <figure class="portrait">
-                <img src="photo.jpg" alt="Pavel Khaliullin" width="480" height="600" fetchpriority="high" decoding="async">
+                <span class="portrait-fallback" aria-hidden="true">PK</span>
+                <img src="photo.jpg" alt="Pavel Khaliullin" width="480" height="600" fetchpriority="high" decoding="async" data-en-alt="Pavel Khaliullin" data-ru-alt="Павел Халиуллин">
             </figure>
         </section>
 
         <section class="about shell" aria-labelledby="about-heading">
-            <h2 id="about-heading">About</h2>
+            <h2 id="about-heading" data-en="About" data-ru="Обо мне">About</h2>
             <div class="prose">
-                <p>Co-founder of WebHap. I ship commercial sites and Telegram products: interface, backend, APIs, production.</p>
-                <p>React, Next.js, Python. Mini Apps and bots. Claude, GPT, and Cursor in the workflow — I own the architecture.</p>
+                <p data-en="Co-founder of WebHap. I ship commercial sites and Telegram products: interface, backend, APIs, production." data-ru="Сооснователь WebHap. Делаю коммерческие сайты и продукты в Telegram: интерфейс, бэкенд, API, прод.">Co-founder of WebHap. I ship commercial sites and Telegram products: interface, backend, APIs, production.</p>
+                <p data-en="React, Next.js, Python. Mini Apps and bots. Claude, GPT, and Cursor in the workflow — I own the architecture." data-ru="React, Next.js, Python. Mini Apps и боты. Claude, GPT и Cursor в работе — архитектуру держу сам.">React, Next.js, Python. Mini Apps and bots. Claude, GPT, and Cursor in the workflow — I own the architecture.</p>
             </div>
         </section>
 
         <section class="skills shell" id="skills" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Skills</h2>
+            <h2 id="skills-heading" data-en="Skills" data-ru="Навыки">Skills</h2>
             <dl class="skill-list">
                 <div>
                     <dt>Full-stack</dt>
@@ -116,39 +135,39 @@
                 </div>
                 <div>
                     <dt>Telegram</dt>
-                    <dd>Telegram Bot API, bots, Mini Apps, backend integrations</dd>
+                    <dd data-en="Telegram Bot API, bots, Mini Apps, backend integrations" data-ru="Telegram Bot API, боты, Mini Apps, интеграции бэкенда">Telegram Bot API, bots, Mini Apps, backend integrations</dd>
                 </div>
                 <div>
                     <dt>AI</dt>
                     <dd>OpenAI / GPT, Anthropic / Claude, LLM APIs, Cursor, coding agents</dd>
                 </div>
                 <div>
-                    <dt>Data &amp; APIs</dt>
-                    <dd>API integrations, data processing, web scraping, OpenStreetMap, Overpass API</dd>
+                    <dt data-en="Data & APIs" data-ru="Данные и API">Data &amp; APIs</dt>
+                    <dd data-en="API integrations, data processing, web scraping, OpenStreetMap, Overpass API" data-ru="Интеграции API, обработка данных, веб-скрапинг, OpenStreetMap, Overpass API">API integrations, data processing, web scraping, OpenStreetMap, Overpass API</dd>
                 </div>
                 <div>
-                    <dt>Infrastructure</dt>
+                    <dt data-en="Infrastructure" data-ru="Инфраструктура">Infrastructure</dt>
                     <dd>Git, GitHub, Vercel, Lighthouse, WordPress</dd>
                 </div>
             </dl>
         </section>
 
         <section class="work shell" id="work" aria-labelledby="work-heading">
-            <h2 id="work-heading">Work</h2>
+            <h2 id="work-heading" data-en="Work" data-ru="Работы">Work</h2>
 
-            <h3 class="work-group">Web</h3>
+            <h3 class="work-group" data-en="Web" data-ru="Веб">Web</h3>
             <ul class="work-list">
                 <li>
                     <a href="https://web-hap.ru" target="_blank" rel="noopener noreferrer" class="work-row">
                         <span class="work-name">WebHap</span>
-                        <span class="work-desc">Commercial studio website.</span>
+                        <span class="work-desc" data-en="Commercial studio website." data-ru="Сайт студии.">Commercial studio website.</span>
                         <span class="work-url">web-hap.ru</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://lefevralov.ru" target="_blank" rel="noopener noreferrer" class="work-row">
                         <span class="work-name">Lefevralov</span>
-                        <span class="work-desc">Business website.</span>
+                        <span class="work-desc" data-en="Business website." data-ru="Бизнес-сайт.">Business website.</span>
                         <span class="work-url">lefevralov.ru</span>
                     </a>
                 </li>
@@ -159,7 +178,7 @@
                 <li>
                     <a href="https://korm-kabana-bot.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-row">
                         <span class="work-name">Korm Kabana</span>
-                        <span class="work-desc">Mini App game. Catch burgers, dodge bombs.</span>
+                        <span class="work-desc" data-en="Mini App game. Catch burgers, dodge bombs." data-ru="Mini App-игра. Лови бургеры, уворачивайся от бомб.">Mini App game. Catch burgers, dodge bombs.</span>
                         <span class="work-url">korm-kabana-bot.vercel.app</span>
                     </a>
                 </li>
@@ -167,63 +186,68 @@
         </section>
 
         <section class="experience shell" id="experience" aria-labelledby="experience-heading">
-            <h2 id="experience-heading">Experience</h2>
+            <h2 id="experience-heading" data-en="Experience" data-ru="Опыт">Experience</h2>
 
             <article class="job">
                 <header>
                     <h3>WebHap</h3>
-                    <p class="role">Co-founder / Full-stack</p>
+                    <p class="role" data-en="Co-founder / Full-stack" data-ru="Сооснователь / фуллстек">Co-founder / Full-stack</p>
                 </header>
-                <p>Co-founded WebHap with a partner. Full commercial cycle: client, requirements, implementation, Vercel, Lighthouse, maintenance. Concept to a live site.</p>
-                <p>React / Next.js with SSR, mobile-first CSS, semantic HTML, GitHub, continuous deploy on Vercel.</p>
+                <p data-en="Co-founded WebHap with a partner. Full commercial cycle: client, requirements, implementation, Vercel, Lighthouse, maintenance. Concept to a live site." data-ru="Основал WebHap с партнёром. Полный цикл: клиент, требования, реализация, Vercel, Lighthouse, сопровождение. От идеи до живого сайта.">Co-founded WebHap with a partner. Full commercial cycle: client, requirements, implementation, Vercel, Lighthouse, maintenance. Concept to a live site.</p>
+                <p data-en="React / Next.js with SSR, mobile-first CSS, semantic HTML, GitHub, continuous deploy on Vercel." data-ru="React / Next.js с SSR, mobile-first CSS, семантический HTML, GitHub, деплой на Vercel.">React / Next.js with SSR, mobile-first CSS, semantic HTML, GitHub, continuous deploy on Vercel.</p>
             </article>
 
             <article class="job">
                 <header>
-                    <h3>Telegram &amp; automation</h3>
-                    <p class="role">Independent developer</p>
+                    <h3 data-en="Telegram & automation" data-ru="Telegram и автоматизация">Telegram &amp; automation</h3>
+                    <p class="role" data-en="Independent developer" data-ru="Независимый разработчик">Independent developer</p>
                 </header>
-                <p>Bots on the Telegram Bot API, Mini Apps with React and the Telegram WebApp SDK, automation scripts. Commands, inline keyboards, webhooks.</p>
-                <p>Shipped Korm Kabana, a Mini App game on Vercel. Integrations: external APIs, data pipelines, OpenStreetMap / Overpass, JSON.</p>
-                <p>Automation and data tools inside Telegram — bots and workflows where users already are.</p>
+                <p data-en="Bots on the Telegram Bot API, Mini Apps with React and the Telegram WebApp SDK, automation scripts. Commands, inline keyboards, webhooks." data-ru="Боты на Telegram Bot API, Mini Apps на React и Telegram WebApp SDK, скрипты автоматизации. Команды, inline-клавиатуры, вебхуки.">Bots on the Telegram Bot API, Mini Apps with React and the Telegram WebApp SDK, automation scripts. Commands, inline keyboards, webhooks.</p>
+                <p data-en="Shipped Korm Kabana, a Mini App game on Vercel. Integrations: external APIs, data pipelines, OpenStreetMap / Overpass, JSON." data-ru="Сделал Korm Kabana — Mini App-игру на Vercel. Интеграции: внешние API, пайплайны данных, OpenStreetMap / Overpass, JSON.">Shipped Korm Kabana, a Mini App game on Vercel. Integrations: external APIs, data pipelines, OpenStreetMap / Overpass, JSON.</p>
+                <p data-en="Automation and data tools inside Telegram — bots and workflows where users already are." data-ru="Автоматизация и данные внутри Telegram — боты и процессы там, где уже сидят пользователи.">Automation and data tools inside Telegram — bots and workflows where users already are.</p>
             </article>
 
             <article class="job">
                 <header>
                     <h3>Web3 / TON</h3>
-                    <p class="role">Ecosystem explorer</p>
+                    <p class="role" data-en="Ecosystem explorer" data-ru="Исследую экосистему">Ecosystem explorer</p>
                 </header>
-                <p>Earlier work around crypto and Web3: how fast-moving tech markets behave, how digital products scale, and how technical communities form. Close-up view of rapid development cycles, protocol upgrades, and product iteration.</p>
-                <p>Explored TON and how it sits next to Telegram. Interest: Telegram as distribution, Mini Apps as the UI, TON as settlement, AI for automation — products that combine those layers.</p>
+                <p data-en="Earlier work around crypto and Web3: how fast-moving tech markets behave, how digital products scale, and how technical communities form. Close-up view of rapid development cycles, protocol upgrades, and product iteration." data-ru="Раньше работал вокруг крипты и Web3: как ведут себя быстрые техрынки, как масштабируются цифровые продукты и как складываются технические сообщества. Близко видел короткие циклы разработки, апгрейды протоколов и итерации продукта.">Earlier work around crypto and Web3: how fast-moving tech markets behave, how digital products scale, and how technical communities form. Close-up view of rapid development cycles, protocol upgrades, and product iteration.</p>
+                <p data-en="Explored TON and how it sits next to Telegram. Interest: Telegram as distribution, Mini Apps as the UI, TON as settlement, AI for automation — products that combine those layers." data-ru="Разбирал TON и как он стоит рядом с Telegram. Интерес: Telegram как дистрибуция, Mini Apps как интерфейс, TON как расчёты, AI для автоматизации — продукты на стыке этих слоёв.">Explored TON and how it sits next to Telegram. Interest: Telegram as distribution, Mini Apps as the UI, TON as settlement, AI for automation — products that combine those layers.</p>
             </article>
         </section>
 
         <section class="how shell" aria-labelledby="how-heading">
-            <h2 id="how-heading">How I work</h2>
+            <h2 id="how-heading" data-en="How I work" data-ru="Как я работаю">How I work</h2>
             <ul class="plain-list">
-                <li>Fast learner on unfamiliar stacks</li>
-                <li>Comfortable walking into new codebases</li>
-                <li>Solves problems independently</li>
-                <li>End-to-end product development</li>
-                <li>Clear with clients and teammates</li>
-                <li>Reliable on deadlines</li>
+                <li data-en="Fast learner on unfamiliar stacks" data-ru="Быстро вхожу в незнакомый стек">Fast learner on unfamiliar stacks</li>
+                <li data-en="Comfortable walking into new codebases" data-ru="Нормально захожу в чужой код">Comfortable walking into new codebases</li>
+                <li data-en="Solves problems independently" data-ru="Разбираюсь сам">Solves problems independently</li>
+                <li data-en="End-to-end product development" data-ru="Веду продукт от идеи до прода">End-to-end product development</li>
+                <li data-en="Clear with clients and teammates" data-ru="Понятно объясняю клиентам и команде">Clear with clients and teammates</li>
+                <li data-en="Reliable on deadlines" data-ru="Держу сроки">Reliable on deadlines</li>
             </ul>
         </section>
 
         <section class="looking shell" aria-labelledby="looking-heading">
-            <h2 id="looking-heading">Looking for</h2>
+            <h2 id="looking-heading" data-en="Looking for" data-ru="Ищу">Looking for</h2>
             <p class="looking-role">Middle+ Full-Stack Developer / AI Developer / Full-Stack AI Engineer</p>
-            <p class="looking-areas">AI-powered web apps, full-stack, React / Next.js, Python backend, AI agents and LLM integrations, automation, Telegram bots and Mini Apps, SaaS, internal tools, Web3 / TON.</p>
-            <p>Remote, part-time, or full-time.</p>
+            <p class="looking-areas" data-en="AI-powered web apps, full-stack, React / Next.js, Python backend, AI agents and LLM integrations, automation, Telegram bots and Mini Apps, SaaS, internal tools, Web3 / TON." data-ru="Веб-приложения с AI, фуллстек, React / Next.js, бэкенд на Python, AI-агенты и LLM, автоматизация, боты и Mini Apps в Telegram, SaaS, внутренние инструменты, Web3 / TON.">AI-powered web apps, full-stack, React / Next.js, Python backend, AI agents and LLM integrations, automation, Telegram bots and Mini Apps, SaaS, internal tools, Web3 / TON.</p>
+            <p data-en="Remote, part-time, or full-time." data-ru="Удалёнка, part-time или full-time.">Remote, part-time, or full-time.</p>
         </section>
     </main>
 
     <footer class="colophon">
         <div class="shell colophon-row">
-            <p>© 2026 Pavel Khaliullin</p>
+            <p data-en="© 2026 Pavel Khaliullin" data-ru="© 2026 Павел Халиуллин">© 2026 Pavel Khaliullin</p>
+            <p class="colophon-links">
+                <a href="mailto:pasha.174xaliyllin@gmail.com">Email</a>
+                <a href="https://t.me/deathqwe" target="_blank" rel="noopener noreferrer">Telegram <span class="visually-hidden" data-en="(opens in a new tab)" data-ru="(откроется в новой вкладке)">(opens in a new tab)</span></a>
+                <a href="https://github.com/desperado616" target="_blank" rel="noopener noreferrer">GitHub <span class="visually-hidden" data-en="(opens in a new tab)" data-ru="(откроется в новой вкладке)">(opens in a new tab)</span></a>
+            </p>
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
